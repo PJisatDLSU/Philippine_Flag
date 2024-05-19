@@ -1,0 +1,39 @@
+@startuml
+class Main {
+- Flag flag
+- Star star1
+- Star star2
+- Star star3
+- Sun sun
++ void run()
++ {static} void main(String[])
+}
+
+
+class Sun {
+- GOval sunBase
+- GPolygon[] rays
+- double initialAngle
+- GPolygon createRay()
++ void addToProgram(GraphicsProgram,double,double)
+}
+
+
+class Star {
+- GPolygon star
++ void addToProgram(GraphicsProgram)
+}
+
+
+class Flag {
+- GPolygon top
+- GLine middle
++ void addToProgram(GraphicsProgram)
++ void adjustShapes(int,int)
+}
+
+
+
+
+GraphicsProgram <|-- Main
+@enduml
